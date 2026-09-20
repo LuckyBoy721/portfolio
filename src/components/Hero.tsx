@@ -103,7 +103,7 @@ export const Hero: React.FC = () => {
                     <span className="w-2.5 h-2.5 rounded-full bg-rose-400 border border-neo-border inline-block"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-amber-300 border border-neo-border inline-block"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 border border-neo-border inline-block"></span>
-                    <span className="ml-1 text-[11px] text-neo-black dark:text-zinc-100">radifan-asyauri.jpg</span>
+                    <span className="ml-1 text-[11px] text-neo-black dark:text-zinc-100">radifan-asyauri.webp</span>
                   </span>
                   <span className="text-[10px] bg-neo-yellow text-neo-black px-1.5 py-0.5 border border-black font-extrabold">
                     SMT 7
@@ -113,9 +113,10 @@ export const Hero: React.FC = () => {
                 {/* Profile Photo */}
                 <div className="relative overflow-hidden border-2 border-neo-border dark:border-neo-darkborder aspect-[3/4] bg-zinc-100 dark:bg-zinc-800">
                   <img 
-                    src="/profile.png" 
+                    src="/profile.webp" 
                     alt="Muhammad Radifan Asyauri" 
                     className="w-full h-full object-cover object-center"
+                    loading="eager"
                   />
                   <div className="absolute bottom-2 right-2 px-2 py-0.5 bg-neo-yellow text-neo-black font-mono font-bold text-[10px] border-2 border-neo-border shadow-neo-sm">
                     DATA SCIENCE // AUTOMATION
