@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --border-color: #26262B;
+    --shadow-color: #26262B;
+  }
+
+  .dark {
+    --border-color: #D4D4D8;
+    --shadow-color: #D4D4D8;
+  }
+
+  /* Custom focus outline for keyboard accessibility (WCAG AA) */
+  *:focus-visible {
+    outline: 2.5px solid #E29578 !important;
+    outline-offset: 2px !important;
+  }
+}
+
+@layer components {
+  /* Core Neo-Brutalist Components */
+  .neo-box {
+    @apply border-3 border-neo-border dark:border-neo-darkborder bg-white dark:bg-neo-darkcard shadow-neo dark:shadow-neo-dark transition-all;
+  }
+
+  .neo-box-yellow {
+    @apply border-3 border-neo-border dark:border-neo-darkborder bg-neo-yellow text-neo-black shadow-neo dark:shadow-neo-dark;
+  }
+
+  .neo-box-green {
+    @apply border-3 border-neo-border dark:border-neo-darkborder bg-neo-green text-neo-black shadow-neo dark:shadow-neo-dark;
+  }
+
+  .neo-box-cyan {
+    @apply border-3 border-neo-border dark:border-neo-darkborder bg-neo-cyan text-neo-black shadow-neo dark:shadow-neo-dark;
+  }
+
+  .neo-box-orange {
+    @apply border-3 border-neo-border dark:border-neo-darkborder bg-neo-orange text-neo-black shadow-neo dark:shadow-neo-dark;
+  }
+
+  .neo-btn {
+    @apply inline-flex items-center justify-center font-bold px-4 py-2 border-3 border-neo-border dark:border-neo-darkborder shadow-neo dark:shadow-neo-dark active:translate-x-[2px] active:translate-y-[2px] active:shadow-neo-sm dark:active:shadow-neo-dark-sm transition-transform duration-100 cursor-pointer text-neo-black;
+  }
+
+  .neo-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-mono font-bold uppercase tracking-wider border-2 border-neo-border dark:border-neo-darkborder shadow-neo-sm dark:shadow-neo-dark-sm;
+  }
+
+  .neo-tag {
+    @apply px-2.5 py-0.5 text-xs font-mono font-semibold border-2 border-neo-border dark:border-neo-darkborder bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100;
+  }
+}
+
+/* Custom Neo-Brutalist Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F4EE;
+  border-left: 2px solid #26262B;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #18181B;
+  border-left: 2px solid #D4D4D8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F0D88B;
+  border: 2px solid #26262B;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #92B8C9;
+  border: 2px solid #D4D4D8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E29578;
+}
